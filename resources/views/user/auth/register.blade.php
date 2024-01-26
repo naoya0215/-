@@ -14,7 +14,7 @@
                
             </div>
             <div class="menu">
-                <li class="menu_list"><a href="{{ route('login') }}">ログイン</a></li>
+                <li class="menu_list"><a href="{{ route('user.login') }}">ログイン</a></li>
             </div>
             <button type="button" class="btn js-btn">
                 <span class="btn-line"></span>
@@ -28,7 +28,7 @@
         <div class="login">
             <x-auth-session-status class="mb-4" :status="session('status')" />
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('user.register') }}">
                 @csrf
                 <!-- Name -->
                 <div class="text_login">
@@ -60,35 +60,5 @@
             </form>
         </div>
     </div> 
-    <footer>
-        <div class="footer_wrapper">
-            <ul class="footer_box">
-                <li>紹介</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>実績</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>お問い合わせ</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>トップ</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

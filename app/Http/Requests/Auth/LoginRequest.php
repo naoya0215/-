@@ -47,7 +47,9 @@ class LoginRequest extends FormRequest
 
         $guard = ''; // 変数を初期化
 
-        if($this->routeIs('users.*')){
+        if($this->routeIs('admin.*')){
+            $guard = 'admin';
+        } else {
             $guard = 'users';
         }
 

@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Event;
+use App\Models\Shop;
+use App\Models\Category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,10 +21,19 @@ class DatabaseSeeder extends Seeder
          * @return void
          */
         {
-            // \App\Models\User::factory(10)->create();
+
+            Event::factory(10)->create();
             $this->call([
-                UserSeeder::class
+                UserSeeder::class,
+                AdminSeeder::class,
+                CategorySeeder::class,
+                ReservationSeeder::class
             ]);
+
+           
+            Shop::factory(100)->create();
+            // \App\Models\User::factory(10)->create();
+
         }
     }
 }

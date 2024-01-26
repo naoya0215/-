@@ -15,7 +15,7 @@
         <div class="login">
             <x-auth-session-status class="mb-4" :status="session('status')" />
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('user.login') }}">
                 @csrf
                 <div class="text_login">
                     <h3>メールアドレス</h3>
@@ -31,41 +31,13 @@
                     {{ __('ログイン') }}
                 </button>  
                 <div class="reset_login">
-                    <a class="reset_pass" href="{{ route('register') }}">
+                    <a class="reset_pass" href="{{ route('user.register') }}">
                         {{ __('新規登録はこちら') }}
                     </a>
                 </div>
             </form>
         </div>
     </div>
-    <footer>
-        <div class="footer_wrapper">
-            <ul class="footer_box">
-                <li>紹介</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>実績</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>お問い合わせ</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-            <ul class="footer_box">
-                <li>トップ</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-                <li>XXXXXXXXXXXX</li>
-            </ul>
-        </div>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
